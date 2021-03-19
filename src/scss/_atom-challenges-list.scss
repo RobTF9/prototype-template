@@ -1,0 +1,257 @@
+/* ----- ATOM-CHALLENGES-LIST.scss ----- */
+
+// Atom, challenges list.
+.atom-challenges-list {
+  height: 100%;
+  margin: 0 auto;
+  max-width: 1200px;
+  position: relative;
+
+  // Any signal in list
+  .core-signal {
+    margin-top: 20px;
+  }
+
+  // List header
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 20;
+
+     .header-signal {
+      bottom: 0;
+      position: absolute;
+      transform: translateY(100%);
+     }
+
+    * {
+      margin: 0;
+    }
+
+    .links {
+      display: flex;
+    }
+
+    .link-group {
+      display: flex;
+      margin-left: 10px;
+    }
+
+    .item {
+      margin-left: 10px;
+    }
+
+    &::after {
+      background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(26, 27, 32, 1) 50%
+      );
+      content: '';
+      display: block;
+      height: 60px;
+      left: 0;
+      pointer-events: none;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+      z-index: -1;
+    }
+  }
+
+
+  // Group Heading
+  .heading {
+    align-items: center;
+    display: flex;
+
+    &:first-of-type {
+      margin-top: 40px;
+    }
+
+    h2 {
+      margin: 0;
+    }
+  }
+
+  // Unlock Message
+  .unlock-message {
+    align-items: center;
+    display: flex;
+    margin: 20px 0;
+
+    svg {
+      fill: $color-yellow-darkest;
+      flex-shrink: 0;
+      height: 20px;
+      margin-right: 8px;
+      width: 20px;
+    }
+
+    p {
+      color: $color-yellow-prime;
+      margin: 0;
+    }
+  }
+
+  // Group intro
+  .info {
+    background: $color-grey-uberdark;
+    border-radius: 5px;
+    margin: 15px 0;
+    padding: 20px;
+    text-align: left;
+  }
+
+  // Group
+  .group {
+    margin-top: 15px;
+  }
+
+
+  // Grid Group (used in React version)
+  .group--grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    margin-bottom: 50px;
+  }
+
+  // List Group (used in React version)
+  .group--list {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr;
+    margin-bottom: 40px;
+  }
+
+  // Challenge.
+  .challenge {
+    @include full-border($color-blue-prime);
+    background-color: $color-grey-superdark;
+    box-shadow: 0 4px 16px $color-grey-uberdark;
+    display: block;
+    position: relative;
+    transform: scale(1);
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+      @include full-border($color-green-prime);
+    }
+
+    // Title
+    .title {
+      word-break: break-word;
+    }
+
+    // Points.
+    .points {
+      color: $color-green-prime;
+      display: block;
+      font-size: $font-size - 1px;
+    }
+
+    // Action.
+    .action {
+      color: $color-blue-prime;
+      font-size: $font-size - 1px;
+
+      // Action, completed.
+      &.action--completed {
+        color: $color-green-prime;
+      }
+
+      // Action, locked.
+      &.action--locked {
+        color: $color-grey-prime;
+      }
+    }
+
+    // Challenge, completed.
+    &.challenge--completed {
+      @include full-border($color-green-prime);
+      box-shadow: none;
+    }
+
+    // Challenge, locked.
+    &.challenge--locked {
+      @include full-border($color-grey-dark);
+      box-shadow: none;
+      pointer-events: none;
+
+      .points,
+      .title {
+        color: $color-grey-prime;
+      }
+
+      .action svg {
+        fill: $color-grey-darkest;
+        height: 18px;
+        margin-right: 4px;
+        margin-top: -2px;
+        width: 18px;
+      }
+    }
+
+    &.challenge--disabled {
+      @include full-border($color-grey-prime);
+      cursor: default;
+
+      .action {
+        color: $color-grey-prime;
+      }
+    }
+  }
+
+  // Challenge, grid
+  .challenge--grid {
+    min-height: 200px;
+    padding: 20px;
+    position: relative;
+
+    &:hover {
+      transform: scale(1.05);
+      transition: transform 0.2s ease-in-out;
+    }
+
+
+    // Action.
+    .action {
+      bottom: 0;
+      position: absolute;
+      right: 20px;
+    }
+  }
+
+  // Challenge, row.
+  .challenge--row {
+    margin-bottom: 10px;
+    padding: 10px;
+
+    & > div {
+      display: flex;
+      justify-content: space-between;
+
+      .title {
+        margin-left: 10px;
+        margin-right: auto;
+      }
+    }
+
+    // Core text.
+    .core-text {
+      font-size: $font-size - 1px;
+      margin: 0;
+    }
+
+    // Last child.
+    &:last-child {
+      margin-bottom: 20px;
+    }
+  }
+}

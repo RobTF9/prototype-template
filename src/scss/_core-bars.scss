@@ -1,0 +1,78 @@
+
+/* ----- CORE-BARS.scss ----- */
+
+// Bars.
+.core-bar {
+  @include rounded(5px);
+  background-color: $color-blue-superdark;
+  height: 2px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  // Completed.
+  .completed {
+    background-color: $color-blue-prime;
+    height: 2px;
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
+
+  // Bar, bottom.
+  &.core-bar--bottom {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+  }
+
+  // Bar, positive.
+  &.core-bar--positive {
+    background-color: $color-green-superdark;
+
+    // Completed.
+    .completed {
+      background-color: $color-green-prime;
+    }
+  }
+
+  // Bar, warning.
+  &.core-bar--warning {
+    background-color: $color-yellow-superdark;
+
+    // Completed.
+    .completed {
+      background-color: $color-yellow-prime;
+    }
+  }
+
+  // Bar, danger.
+  &.core-bar--danger {
+    background-color: $color-red-superdark;
+
+    // Completed.
+    .completed {
+      background-color: $color-red-prime;
+    }
+  }
+
+  // Bar, secondary.
+  &.core-bar--secondary {
+    background-color: $color-grey-darkest;
+
+    // Completed.
+    .completed {
+      background-color: $color-grey-light;
+    }
+  }
+
+  // Bar, taller.
+  &.core-bar--taller {
+    height: 4px;
+
+    // Completed.
+    .completed {
+      height: 4px;
+    }
+  }
+}

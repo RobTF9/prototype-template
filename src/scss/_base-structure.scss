@@ -1,0 +1,22 @@
+
+/* ----- BASE-STRUCTURE.scss ----- */
+
+// Set max width.
+$max-width: 1000px;
+
+// Z-index.
+$z-top: 100;
+$z-middle: 50;
+$z-bottom: 0;
+
+// Universal box sizing.
+html,
+body {
+  box-sizing: border-box;
+  height: 100%;
+
+  // Everything.
+  * {
+    box-sizing: inherit;
+  }
+}

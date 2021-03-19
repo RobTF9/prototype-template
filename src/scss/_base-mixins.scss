@@ -1,0 +1,100 @@
+
+/* ----- MIXINS.scss ----- */
+
+// Appearance.
+@mixin appearance {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+// Clearfix.
+@mixin clearfix {
+
+  // Before and after.
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+
+  // Just after.
+  &:after {
+    clear: both;
+  }
+}
+
+// Glow.
+// Use with '@include glow(0, 8px, $color-blue-prime, 0.2);' for example.
+@mixin glow($depth: 10px, $spread: 0, $color: $color-primary-black, $opacity: 1) {
+  -webkit-box-shadow: $depth $depth $spread $spread rgba($color, $opacity);
+  -moz-box-shadow: $depth $depth $spread $spread rgba($color, $opacity);
+  box-shadow: $depth $depth $spread $spread rgba($color, $opacity);
+}
+
+// Rounded corners, all.
+@mixin rounded ($radius: 10px) {
+  border-radius: $radius;
+}
+
+// Rounded corners, bottom.
+@mixin rounded-bottom ($radius: 10px) {
+  border-bottom-left-radius: $radius;
+  border-bottom-right-radius: $radius;
+}
+
+// Rounded corners, top.
+@mixin rounded-top ($radius: 10px) {
+  border-top-left-radius: $radius;
+  border-top-right-radius: $radius;
+}
+
+// Rounded corners, right.
+@mixin rounded-right ($radius: 10px) {
+  border-bottom-right-radius: $radius;
+  border-top-right-radius: $radius;
+}
+
+// Rounded corners, left.
+@mixin rounded-left ($radius: 10px) {
+  border-bottom-left-radius: $radius;
+  border-top-left-radius: $radius;
+}
+
+// Rounded corners, top left.
+@mixin rounded-top-left ($radius: 10px) {
+  border-top-left-radius: $radius;
+}
+
+// Rounded corners, top right.
+@mixin rounded-top-right ($radius: 10px) {
+  border-top-right-radius: $radius;
+}
+
+// Rounded corners, bottom left.
+@mixin rounded-bottom-left ($radius: 10px) {
+  border-bottom-left-radius: $radius;
+}
+
+// Rounded corners, bottom right.
+@mixin rounded-bottom-right ($radius: 10px) {
+  border-bottom-right-radius: $radius;
+}
+
+// Tabular numbers OpenType font variant.
+@mixin tabular-numbers {
+  -moz-font-feature-settings: "tnum";
+  -webkit-font-feature-settings: "tnum";
+  font-feature-settings: "tnum";
+  font-variant-caps: tabular-nums;
+}
+
+// Visually hidden
+@mixin visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}

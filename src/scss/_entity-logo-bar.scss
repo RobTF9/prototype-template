@@ -1,0 +1,43 @@
+
+/* ----- ENTITY-LOGO-BAR.scss ----- */
+
+// Entity, logo bar.
+.entity-logo-bar {
+  padding: 40px 0 40px 0;
+
+  // Logo.
+  .logo {
+
+    // Responsive.
+    @media screen and (max-width: 850px) {
+      text-align: center;
+    }
+  }
+
+  // Links.
+  .links {
+    text-align: right;
+
+    // Item.
+    .item {
+      display: inline-block;
+      padding: 0 0 0 20px;
+
+      // Responsive.
+      @media screen and (max-width: 850px) {
+        padding: 15px 10px 0 10px;
+      }
+
+      // Responsive.
+      @media screen and (max-width: 650px) {
+        display: block;
+      }
+    }
+
+    // Responsive.
+    @media screen and (max-width: 850px) {
+      padding: 15px 0 0 0;
+      text-align: center;
+    }
+  }
+}

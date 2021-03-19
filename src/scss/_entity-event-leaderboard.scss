@@ -1,0 +1,108 @@
+
+/* ----- ENTITY-EVENT-LEADERBOARD.scss ----- */
+.page {
+  & > .entity-event-leaderboard {
+    flex: 1 1 0;
+
+    .inner {
+      height: 100%;
+    }
+  }
+}
+
+// Entity, event, leaderboard
+.entity-event-leaderboard {
+
+  // Wrapper.
+  .wrapper {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  // Block elements within wrapper.
+  .hat,
+  .main,
+  .aside {
+    flex: 1 100%;
+  }
+
+  // Box.
+  .box {
+    padding: 20px;
+  }
+
+  // Hat.
+  .hat {
+
+
+    // Lead.
+    .lead {
+      padding-bottom: 0;
+    }
+
+    // Timer.
+    .timer {
+      padding-top: 5px;
+    }
+  }
+
+  // Main.
+  .main {
+    padding: 0;
+
+    // Box.
+    .box {
+      @include side-border(top, $color-grey-darkest);
+      @include side-border(bottom, $color-grey-darkest);
+      padding-bottom: 0;
+    }
+  }
+
+  // Aside.
+  .aside {
+    @include full-border($color-grey-darkest);
+  }
+
+  // Responsive.
+  @media all and (min-width: 600px) {
+
+    // Aside.
+    .aside {
+      flex: 1 0 0;
+    }
+  }
+
+  // Responsive.
+  @media all and (min-width: 1100px) {
+
+    // Hat.
+    .hat {
+      order: 1;
+    }
+
+    // Main.
+    .main {
+      flex: 3 1 0;
+      order: 2;
+    }
+
+    // Aside.
+    .aside {
+      order: 3;
+    }
+  }
+
+  // Responsive.
+  @media all and (max-width: 1100px) {
+
+    // Main.
+    .main {
+      border-bottom: 0;
+    }
+
+    // Timer.
+    .timer {
+      padding-bottom: 20px;
+    }
+  }
+}

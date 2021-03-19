@@ -1,0 +1,237 @@
+
+/* ----- ATOM-LEADERBOARD.scss ----- */
+
+// Atom, leaderboard.
+.atom-leaderboard {
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+
+  // Header.
+  .header {
+    align-items: flex-start;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 20;
+
+    &::after {
+      background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(26, 27, 32, 1) 50%
+      );
+      content: '';
+      display: block;
+      height: 60px;
+      left: 0;
+      pointer-events: none;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+      z-index: -1;
+    }
+  }
+
+  // Row.
+  .row {
+    display: flex;
+    font-size: $font-size - 1px;
+    justify-content: space-between;
+    margin: 0 0 35px 0;
+    padding: 0 0 15px 0;
+    position: relative;
+  }
+
+  @keyframes appear {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 100px, 0);
+    }
+
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  .appearing {
+    animation: appear 400ms;
+  }
+
+  // Info.
+  .info {
+    position: relative;
+
+    // Rank.
+    .rank {
+      color: $color-yellow-prime;
+      display: inline;
+      padding: 0 5px 0 0;
+    }
+
+    // Subject.
+    .subject {
+      display: inline;
+    }
+
+    // Link.
+    .core-link {
+      outline: none;
+    }
+
+    // Arrow.
+    .arrow {
+      color: $color-yellow-prime;
+      padding: 0 10px 0 0;
+    }
+
+    // Plus.
+    .plus {
+      color: $color-blue-prime;
+      padding: 0 10px 0 5px;
+    }
+
+    // Team.
+    .team {
+      font-size: $font-size - 2px;
+      overflow: hidden;
+      padding: 5px 0 0 20px;
+    }
+
+    // Player.
+    .player {
+      padding: 5px 0 0 0;
+    }
+
+    // Divider.
+    .divider {
+      color: $color-grey-prime;
+      padding: 0 5px 0 5px;
+    }
+
+    // Points.
+    .points {
+      color: $color-green-prime;
+    }
+  }
+
+  // Scores.
+  .scores {
+    flex-shrink: 0;
+    text-align: right;
+
+    // Percent.
+    .percent {
+      color: $color-grey-light;
+    }
+
+    // Divider.
+    .divider {
+      color: $color-grey-dark;
+      padding: 0 5px 0 5px;
+    }
+
+    // Points.
+    .points {
+      color: $color-grey-light;
+    }
+  }
+
+  // Row, mini.
+  .row--mini {
+    font-size: $font-size - 2px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+
+    // Info.
+    .info {
+      padding-left: 0;
+
+      // Link.
+      .core-link {
+        display: inline;
+      }
+
+      // Team.
+      .team {
+        padding-bottom: 2px;
+        padding-left: 20px;
+        padding-top: 0;
+      }
+    }
+
+    // Rank.
+    .rank {
+      display: inline;
+      padding-right: 10px;
+      position: relative;
+    }
+
+    // Subject.
+    .subject {
+      display: inline;
+    }
+  }
+
+  // Row, maxi.
+  .row--maxi {
+    font-size: $font-size + 2px;
+    margin-bottom: 25px;
+  }
+
+  // Row, end.
+  .row--end {
+    padding-top: 25px;
+
+    // Before, line.
+    &::before {
+      @include dot-border(top, $color-grey-darkest);
+      content: "";
+      height: 1px;
+      left: 0;
+      position: absolute;
+      top: 10px;
+      width: 30px;
+    }
+  }
+
+  // Actions.
+  .actions {
+    font-size: $font-size - 1px;
+    padding: 20px 0 20px 0;
+  }
+
+  // Back.
+  .back {
+    font-size: $font-size - 1px;
+  }
+
+  // You.
+  .you {
+    .prefix {
+      color: $color-blue-prime;
+    }
+
+    // Percent.
+    .percent {
+      color: $color-blue-prime;
+    }
+
+    // Divider.
+    .divider {
+      color: $color-blue-dark;
+      padding: 0 5px 0 5px;
+    }
+
+    // Points.
+    .points {
+      color: $color-blue-prime;
+    }
+  }
+}

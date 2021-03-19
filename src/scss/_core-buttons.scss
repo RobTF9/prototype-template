@@ -1,0 +1,192 @@
+
+/* ----- CORE-BUTTONS.scss ----- */
+
+// Button.
+.core-button {
+  @include rounded(5px);
+  background-color: $color-blue-prime;
+  @include full-border($color-blue-prime);
+  box-shadow: none;
+  color: $color-grey-uberdark;
+  display: block;
+  font-family: $font-primary;
+  font-size: $font-size;
+  font-weight: $font-regular;
+  line-height: 1.4;
+  margin: 0 0 15px 0;
+  max-width: 100%;
+  padding: 11px 20px 12px 20px;
+  text-align: center;
+  text-decoration: none;
+  text-size-adjust: none;
+  vertical-align: middle;
+  width: 100%;
+
+  // States.
+  &:visited,
+  &:focus,
+  &:link,
+  &:active {
+    color: $color-grey-uberdark;
+    outline: none;
+  }
+
+  // Just focus.
+  &:focus {
+    outline: thin dotted $color-grey-light;
+    outline-offset: 2px;
+  }
+
+  // Just hover.
+  &:hover {
+    background-color: $color-blue-dark;
+    @include full-border($color-blue-dark);
+    color: $color-grey-uberdark;
+    cursor: pointer;
+    transition: all 0.5s ease;
+  }
+
+  // Button, quiet emphasis.
+  &.core-button--quiet-emphasis {
+    background-color: $color-grey-superdark;
+    @include full-border($color-blue-prime);
+    color: $color-blue-prime;
+
+    // Hover.
+    &:hover {
+      background-color: $color-grey-superdark;
+      @include full-border($color-blue-dark);
+      color: $color-blue-dark;
+    }
+  }
+
+  // Button, quiet.
+  &.core-button--quiet {
+    background-color: $color-grey-superdark;
+    @include full-border($color-grey-prime);
+    color: $color-grey-prime;
+
+    // Hover.
+    &:hover {
+      background-color: $color-grey-superdark;
+      @include full-border($color-blue-dark);
+      color: $color-blue-dark;
+    }
+  }
+
+  // Button, largest.
+  &.core-button--largest {
+    font-size: $font-size + 6px;
+    padding: 24px 40px 24px 40px;
+  }
+
+  // Button, larger.
+  &.core-button--larger {
+    font-size: $font-size + 2px;
+    padding: 18px 34px 18px 34px;
+  }
+
+  // Button, smaller.
+  &.core-button--smaller {
+    font-size: $font-size - 2px;
+    padding: 10px 20px 10px 20px;
+  }
+
+  // Button, smallest.
+  &.core-button--smallest {
+    font-size: $font-size - 2px;
+    padding: 4px 10px 5px 10px;
+  }
+
+  // Button, positive.
+  &.core-button--positive {
+    background-color: $color-green-prime;
+    @include full-border($color-green-prime);
+
+    // Hover.
+    &:hover {
+      background-color: $color-green-dark;
+      @include full-border($color-green-dark);
+    }
+  }
+
+  // Button, warning.
+  &.core-button--warning {
+    background-color: $color-yellow-prime;
+    @include full-border($color-yellow-prime);
+
+    // Hover.
+    &:hover {
+      background-color: $color-yellow-dark;
+      @include full-border($color-yellow-dark);
+    }
+  }
+
+  // Button, danger.
+  &.core-button--danger {
+    background-color: $color-red-prime;
+    @include full-border($color-red-prime);
+
+    // Hover.
+    &:hover {
+      background-color: $color-red-dark;
+      @include full-border($color-red-dark);
+    }
+  }
+
+  // Button, quiet danger.
+  &.core-button--quiet-danger {
+    background-color: $color-grey-superdark;
+    @include full-border($color-red-prime);
+    color: $color-red-prime;
+
+    // Hover.
+    &:hover {
+      background-color: $color-grey-superdark;
+      @include full-border($color-red-dark);
+      color: $color-red-dark;
+    }
+  }
+
+  // Button, inline.
+  &.core-button--inline {
+    float: left;
+    margin-right: 15px;
+    width: auto;
+
+    // Responsive.
+    @media screen and (max-width: 850px) {
+      float: none;
+      margin-right: 0;
+      width: 100%;
+    }
+  }
+
+  // Button, compact.
+  &.core-button--compact {
+    @include rounded(3px);
+    margin: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 150px;
+  }
+
+  // Button, disabled.
+  &:disabled,
+  &[disabled],
+  &.core-button--disabled {
+    background-color: $color-grey-lightest;
+    @include full-border($color-grey-lightest);
+    color: $color-grey-dark;
+    cursor: not-allowed;
+    font-style: italic;
+
+    // Hover.
+    &:hover {
+      background-color: $color-grey-lightest;
+      @include full-border($color-grey-lightest);
+      color: $color-grey-dark;
+    }
+  }
+}

@@ -1,0 +1,158 @@
+
+/* ----- HELPERS.scss ----- */
+
+// Align center.
+.helper-align-center {
+  text-align: center;
+}
+
+// Align left.
+.helper-align-left {
+  text-align: left;
+}
+
+// Align right.
+.helper-align-right {
+  text-align: right;
+}
+
+// Box.
+.helper-box {
+  padding: 50px 0;
+
+  // Hat, just top and sides.
+  &.helper-box--hat {
+    border-bottom: 0;
+  }
+}
+
+// Centered, Box.
+.centered {
+  margin-top: 50px;
+
+  .helper-box {
+    @include full-border($color-grey-darkest);
+    padding: 50px;
+
+    // Responsive.
+    @media screen and (max-width: 850px) {
+      padding: 50px 30px;
+    }
+  }
+}
+
+// Clearfix.
+.helper-clearfix {
+  @include clearfix;
+}
+
+// Helper, comp.
+.helper-comp {
+  padding: 0 0 20px 0;
+
+  // Image, SVG.
+  .image--svg {
+    width: 100%;
+  }
+}
+
+// Hidden.
+.helper-hidden {
+  display: none !important;
+}
+
+// Padding.
+.helper-padding {
+
+  // Padding, 10px.
+  &.helper-padding--10px {
+    padding: 10px;
+  }
+
+  // Padding, 20px.
+  &.helper-padding--20px {
+    padding: 20px;
+  }
+}
+
+// Pagination.
+.helper-pagination {
+  @include clearfix;
+  @include side-border(top, $color-grey-dark);
+  font-size: $font-size - 2px;
+  padding: 10px 0 10px 0;
+
+  // Direction.
+  .direction {
+    float: left;
+    width: 50%;
+  }
+
+  // Direction, next.
+  .direction--next {
+    text-align: right;
+  }
+}
+
+// Topper.
+.helper-topper {
+  padding: 0 0 10px 0;
+
+  // Topper, without padding.
+  &.helper-topper--padless {
+    padding-bottom: 0;
+  }
+
+  // Links.
+  .links {
+    font-size: $font-size - 1px;
+    text-align: right;
+
+    // Responsive.
+    @media screen and (max-width: 850px) {
+      padding: 0 0 20px 0;
+    }
+  }
+
+  .link-group {
+    display: inline-block;
+    margin-right: 15px;
+  }
+
+  // Set.
+  .set {
+    display: inline-block;
+    padding-left: 20px;
+  }
+
+  // Item.
+  .item {
+    display: inline-block;
+    padding: 0 0 0 10px;
+
+    // Responsive.
+    @media screen and (max-width: 850px) {
+      padding: 0 0 0 10px;
+    }
+  }
+}
+
+// Block.
+.helper-block {
+  display: block;
+}
+
+// Inline.
+.helper-inline {
+  display: inline;
+}
+
+// Margin bottom 20px.
+.helper-mb--20px {
+  margin-bottom: 20px;
+}
+
+// Margin bottom 40px.
+.helper-mb--40px {
+  margin-bottom: 40px;
+}

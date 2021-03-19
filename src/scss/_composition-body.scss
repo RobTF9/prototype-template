@@ -1,0 +1,17 @@
+
+/* ----- COMPOSITION-BODY.scss ----- */
+
+// Set body styles.
+body,
+.body {
+  background-color: $color-primary-white;
+
+  // Body, dark.
+  &.body--dark {
+    background-color: $color-grey-superdark;
+  }
+
+  &.scroll-lock {
+    overflow: hidden;
+  }
+}

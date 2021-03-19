@@ -1,0 +1,128 @@
+
+/* ----- ENTITY-EVENTS.scss ----- */
+
+// Entity, events.
+.entity-events {
+
+  // Grouping
+  .grouping {
+    @include side-border(top, $color-grey-dark);
+    padding: 20px 0 20px 0;
+  }
+
+  // Event list
+  .event-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 0 20px 0;
+    position: relative;
+    transition: opacity 0.5s ease;
+  }
+
+  // Event list, empty.
+  .events-list--empty {
+    img {
+      margin: 0 auto 40px;
+      transform: translateY(2px);
+    }
+  }
+
+  // Event card.
+  .event-card {
+    @include full-border($color-grey-dark);
+    display: flex;
+    flex-direction: column;
+    height: 0%;
+    justify-content: space-between;
+    margin: 0 15px 15px 0;
+    position: relative;
+    width: calc(33.333% - 10px);
+
+    &:nth-of-type(3n) {
+      margin-right: 0;
+    }
+
+    &:nth-of-type(3n + 1) {
+      margin-left: 0;
+    }
+
+    // Responsive.
+    @media screen and (max-width: 1000px) {
+      margin-left: 0;
+      margin-right: 0;
+      min-height: auto;
+      width: 100%;
+    }
+
+    // Event card bottom.
+    &__bottom {
+      padding: 5px 20px 20px;
+    }
+
+    // Event card top.
+    &__top {
+        padding: 20px 20px 5px;
+    }
+
+    // Modify actions to sit right.
+    .actions {
+        margin-top: 20px;
+        position: relative;
+        text-align: right;
+
+      .action {
+        display: inline;
+        padding: 0 0 0 5px;
+      }
+    }
+
+    // Modify timer bar in Event card.
+    .atom-timer-bar {
+      align-items: start;
+      display: flex;
+      flex-direction: column-reverse;
+      padding: 0 0 15px;
+      width: 100%;
+
+      .time {
+        font-size: 12px;
+        margin-bottom: 10px;
+      }
+
+      .core-bar {
+        margin-right: 10px;
+        width: 100%;
+      }
+    }
+
+    // Event card, live.
+    &.event-card--live {
+      @include full-border($color-blue-prime);
+
+      // Modify timer text color
+      .time {
+        color: $color-blue-prime;
+      }
+    }
+
+    // Event card, warning.
+    &.event-card--warning {
+      @include full-border($color-yellow-prime);
+
+      // Modify timer text color
+      .time {
+        color: $color-yellow-prime;
+      }
+    }
+
+    // Event card, invited.
+    &.event-card--invited {
+      @include full-border($color-green-dark);
+
+      // Modify timer text color
+      .time {
+        color: $color-green-dark;
+      }
+    }
+  }
+}

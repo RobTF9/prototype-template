@@ -1,0 +1,191 @@
+
+/* ----- COMPOSITION-LAYOUT.scss ----- */
+
+// Layout, container.
+.layout-container {
+  @include clearfix;
+}
+
+// Layout.
+.layout {
+
+  // Layout, middle.
+  &.layout--middle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  // Layout, buffer.
+  &.layout--buffer {
+    width: 90%;
+  }
+
+  // Layout, bottom margin.
+  &.layout--bottom-margin {
+    margin-bottom: 40px;
+  }
+
+  // Layout, top margin.
+  &.layout--top-margin {
+    margin-top: 40px;
+  }
+
+  // Layout, bottom padding.
+  &.layout--bottom-padding {
+    padding-bottom: 40px;
+  }
+
+  // Layout, top padding.
+  &.layout--top-padding {
+    padding-top: 40px;
+  }
+
+  // Layout, width, extra wide.
+  &.layout--width-extra-wide {
+    max-width: $max-width + 500px;
+  }
+
+  // Layout, width, wide.
+  &.layout--width-wide {
+    max-width: $max-width + 300px;
+  }
+
+  // Layout, width, standard.
+  &.layout--width-standard {
+    max-width: $max-width;
+  }
+
+  // Layout, width, narrow.
+  &.layout--width-narrow {
+    max-width: $max-width - 300px;
+  }
+
+  // Layout, width, extra narrow.
+  &.layout--width-extra-narrow {
+    max-width: $max-width - 500px;
+  }
+
+  // Half left.
+  &.layout--half-left {
+    float: left;
+    width: 47.5%;
+  }
+
+  // Half right.
+  &.layout--half-right {
+    float: right;
+    width: 47.5%;
+  }
+
+  // Half.
+  &.layout--half {
+    float: left;
+    margin-right: 5%;
+    width: 47.5%;
+
+    // Third, end.
+    &:nth-child(2n+2) {
+      margin-right: 0;
+    }
+  }
+
+  // Third.
+  &.layout--third {
+    float: left;
+    margin-right: 5%;
+    width: 30%;
+
+    // Third, end.
+    &:nth-child(3n+3) {
+      margin-right: 0;
+    }
+  }
+
+  // Layout, two thirds, left.
+  &.layout--two-thirds-left {
+    float: left;
+    margin-right: 5%;
+    width: 65%;
+  }
+
+  // Layout, one third, right.
+  &.layout--one-third-right {
+    float: right;
+    width: 30%;
+  }
+
+  // Layout, two thirds, right.
+  &.layout--two-thirds-right {
+    float: right;
+    width: 65%;
+  }
+
+  // Layout, one third, left.
+  &.layout--one-third-left {
+    float: left;
+    margin-right: 5%;
+    width: 30%;
+  }
+
+  // Layout, quarter.
+  &.layout--quarter {
+    float: left;
+    margin-right: 5%;
+    width: 21.25%;
+
+    // Quarter, end.
+    &:nth-child(4n+4) {
+      margin-right: 0;
+    }
+  }
+
+  // Layout, one quarter, left.
+  &.layout--one-quarter-left {
+    float: left;
+    margin-right: 5%;
+    width: 21.25%;
+  }
+
+  // Layout, three quarters, right.
+  &.layout--three-quarters-right {
+    float: right;
+    width: 73.75%;
+  }
+
+  // Layout, one quarter, right.
+  &.layout--one-quarter-right {
+    float: right;
+    margin-left: 5%;
+    width: 21.25%;
+  }
+
+  // Layout, three quarters, left.
+  &.layout--three-quarters-left {
+    float: left;
+    width: 73.75%;
+  }
+
+  // All split layouts.
+  &.layout--half-left,
+  &.layout--half-right,
+  &.layout--half,
+  &.layout--third,
+  &.layout--two-thirds-left,
+  &.layout--one-third-right,
+  &.layout--two-thirds-right,
+  &.layout--one-third-left,
+  &.layout--quarter,
+  &.layout--one-quarter-left,
+  &.layout--three-quarters-right,
+  &.layout--one-quarter-right,
+  &.layout--three-quarters-left {
+
+    // Responsive.
+    @media screen and (max-width: 850px) {
+      float: none;
+      margin-left: 0;
+      margin-right: 0;
+      width: 100%;
+    }
+  }
+}

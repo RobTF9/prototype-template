@@ -1,0 +1,66 @@
+/* ----- STYLES.scss ----- */
+
+// Base.
+@import 'base-resets';
+@import 'base-structure';
+@import 'base-mixins';
+
+// Core.
+@import 'core-colors';
+@import 'core-borders';
+@import 'core-typography';
+@import 'core-buttons';
+@import 'core-forms';
+@import 'core-signals';
+@import 'core-bars';
+
+// Supporting.
+@import 'supporting-helpers';
+@import 'loading';
+
+// Composition.
+@import 'composition-body';
+@import 'composition-frames';
+@import 'composition-layout';
+@import 'composition-page';
+
+// Atoms.
+@import 'atom-alert';
+@import 'atom-briefing';
+@import 'atom-challenges-list';
+@import 'atom-countdown';
+@import 'atom-data-list';
+@import 'atom-icon';
+@import 'atom-leaderboard';
+@import 'atom-package-preview-group';
+@import 'atom-timer-bar';
+@import 'atom-updates';
+@import 'atom-file-dropdown';
+
+// Entities.
+@import 'entity-basics'; // Universal entity styles.
+@import 'entity-base-bar';
+@import 'entity-billboard';
+@import 'entity-catch-block';
+@import 'entity-events';
+@import 'entity-event-finished';
+@import 'entity-event-leaderboard';
+@import 'entity-event-upcoming';
+@import 'entity-focused-form';
+@import 'entity-focused-message';
+@import 'entity-library-block';
+@import 'entity-library-menu';
+@import 'entity-logo-bar';
+@import 'entity-navigation';
+@import 'entity-menu';
+@import 'entity-organisation';
+@import 'entity-profile';
+@import 'entity-roles';
+@import 'entity-split-info';
+@import 'entity-terms';
+
+// Vendor.
+@import 'flatpickr';
+@import 'uppy';
+@import 'flatpickr-overrides';
+@import 'uppy-overrides';

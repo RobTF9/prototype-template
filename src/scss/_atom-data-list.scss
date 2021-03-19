@@ -1,0 +1,132 @@
+
+/* ----- ATOM-DATA-LIST.scss ----- */
+
+// Atom, data list.
+.atom-data-list {
+
+  // Topper.
+  .helper-topper {
+    padding-bottom: 0;
+  }
+
+  // Data.
+  .data {
+
+    // Grouping.
+    .grouping {
+      @include side-border(top, $color-grey-darkest);
+      padding: 20px 0 20px 0;
+      position: relative;
+      transition: opacity 0.5s ease;
+
+      // Inline.
+      &.grouping--inline {
+        border-top: none;
+        padding: 10px 0 0 0;
+      }
+
+      // Sortable.
+      &.sortable-chosen {
+        opacity: 0.4;
+      }
+    }
+
+    // Search.
+    .search {
+      padding: 0 0 15px 0;
+    }
+
+    // Title.
+    .title {
+      margin-bottom: 10px;
+    }
+
+    // Row.
+    .row {
+      padding: 0 0 10px 0;
+      position: relative;
+      transition: opacity 0.5s ease;
+
+      // Indented.
+      &.row--indented {
+        padding-left: 10px;
+      }
+
+      // Inline.
+      &.row--inline {
+        padding-bottom: 5px;
+      }
+
+      // Sortable.
+      &.sortable-chosen {
+        opacity: 0.4;
+      }
+    }
+
+    // Actions.
+    .row.sortable-chosen .actions {
+      opacity: 0;
+    }
+
+    // Grabber.
+    .grabber {
+      color: $color-grey-prime;
+      cursor: move;
+      left: -22px;
+      padding: 5px;
+      position: absolute;
+      top: -7px;
+
+      // Grabber, grouping.
+      &.grabber--grouping {
+        color: $color-primary-white;
+        top: 14px;
+      }
+    }
+
+    // Detail.
+    .detail {
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    // Summary.
+    .summary {
+      @include side-border(top, $color-grey-dark);
+      padding: 10px 0 0 0;
+    }
+
+    // Action.
+    .actions {
+      font-size: $font-size - 2px;
+      padding-top: 0;
+      text-align: right;
+
+      // Responsive.
+      @media screen and (max-width: 850px) {
+        padding-top: 5px;
+      }
+    }
+
+    // Action.
+    .action {
+      display: inline-block;
+      line-height: 1.5;
+      padding: 0 0 0 10px;
+
+      // Responsive.
+      @media screen and (max-width: 850px) {
+        padding: 0 0 5px 10px;
+      }
+    }
+
+    // File progress
+    .progress {
+      .image {
+        height: 16px;
+        margin-left: 5px;
+        width: 16px;
+      }
+    }
+  }
+}

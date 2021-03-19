@@ -1,0 +1,100 @@
+.atom-package-preview-group {
+    margin-bottom: 60px;
+
+    &:first-of-type {
+        margin-top: 45px;
+    }
+}
+
+.group-header {
+    align-items: center;
+    @include side-border(bottom, $color-grey-dark);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+
+    h2.core-heading--quinary {
+        margin-bottom: 0;
+    }
+
+    .atom-icon {
+        transition: transform ease-in-out 200ms;
+
+        &--open {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.group-body {
+    dt.core-heading.core-heading--quaternary {
+        margin-bottom: 10px;
+    }
+
+    dd.core-text.core-text--secondary {
+        color: $color-grey-lightest;
+        margin: 0 0 25px 0;
+    }
+
+    .info {
+        background: $color-grey-uberdark;
+        border-radius: 5px;
+        margin: 0 0 30px 0;
+        padding: 20px;
+        text-align: left;
+
+        & > *:last-child {
+            margin: 0;
+        }
+    }
+}
+
+.group-challenge {
+    @include side-border(bottom, $color-grey-darkest);
+    padding: 30px 0;
+
+    &:first-of-type {
+        padding-top: 0;
+    }
+
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+.group-challenge-header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    h3.core-heading.core-heading--tertiary {
+        margin: 0;
+    }
+}
+
+.challenge-group-body {
+    margin-top: 30px;
+
+    dl {
+        margin: 0;
+    }
+
+    dt.core-heading.core-heading--quinary {
+        color: $color-grey-prime;
+        margin-bottom: 0;
+    }
+
+    dd.core-text.core-text--secondary {
+        color: $color-grey-lightest;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    ul li {
+        padding: 0;
+    }
+}

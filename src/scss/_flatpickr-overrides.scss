@@ -1,0 +1,79 @@
+
+/* ----- VENDOR-FLATPICKR-OVERRIDES.scss ----- */
+
+// Note: This overrides styles in _flatpickr.scss
+
+// Adjust the background of the main box and bits within it.
+.flatpickr-calendar {
+  background: $color-grey-darkest;
+}
+
+.flatpickr-months .flatpickr-month {
+  background: $color-grey-darkest;
+}
+
+span.flatpickr-weekday {
+  background: $color-grey-darkest;
+}
+
+.flatpickr-current-month .flatpickr-monthDropdown-months {
+  background: $color-grey-darkest;
+}
+
+// Adjust text size in inputs.
+.flatpickr-current-month .flatpickr-monthDropdown-months,
+.flatpickr-current-month input.cur-year {
+  font-size: $font-size;
+}
+
+// Adjust colour background of dropdown.
+.flatpickr-current-month .flatpickr-monthDropdown-months .flatpickr-monthDropdown-month {
+  background: $color-grey-darkest;
+}
+
+// Lighten disabled day and align with next month day.
+.flatpickr-day.flatpickr-disabled,
+.flatpickr-day.nextMonthDay {
+  color: $color-grey-dark;
+}
+
+// Colour tweak on days when hovered.
+.flatpickr-day:hover,
+.flatpickr-day.nextMonthDay:hover {
+  background: $color-grey-prime;
+  border-color: $color-grey-prime;
+}
+
+// Top left and right arrow colours when hovered.
+.flatpickr-months .flatpickr-prev-month:hover,
+.flatpickr-months .flatpickr-next-month:hover {
+  color: $color-blue-prime;
+}
+
+.flatpickr-months .flatpickr-prev-month:hover svg,
+.flatpickr-months .flatpickr-next-month:hover svg {
+  fill: $color-blue-prime;
+}
+
+// Selected day colour.
+.flatpickr-day.selected,
+.flatpickr-day.startRange,
+.flatpickr-day.endRange,
+.flatpickr-day.selected.inRange,
+.flatpickr-day.startRange.inRange,
+.flatpickr-day.endRange.inRange,
+.flatpickr-day.selected:focus,
+.flatpickr-day.startRange:focus,
+.flatpickr-day.endRange:focus,
+.flatpickr-day.selected:hover,
+.flatpickr-day.startRange:hover,
+.flatpickr-day.endRange:hover,
+.flatpickr-day.selected.prevMonthDay,
+.flatpickr-day.startRange.prevMonthDay,
+.flatpickr-day.endRange.prevMonthDay,
+.flatpickr-day.selected.nextMonthDay,
+.flatpickr-day.startRange.nextMonthDay,
+.flatpickr-day.endRange.nextMonthDay {
+  background: $color-blue-prime;
+  border-color: $color-blue-prime;
+}

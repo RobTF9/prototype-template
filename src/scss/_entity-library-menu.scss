@@ -1,0 +1,94 @@
+
+/* ----- ENTITY-LIBRARY-MENU.scss ----- */
+
+// Entity, library menu.
+.entity-library-menu {
+  padding: 20px 20px 60px 20px;
+  width: 250px;
+
+  // Logo.
+  .logo {
+    padding: 0 0 20px 0;
+  }
+
+  // Name.
+  .name {
+    padding: 0 0 20px 0;
+  }
+
+  // Title.
+  .title {
+    display: block;
+
+    // Toggle.
+    .toggle {
+      border: none;
+      color: inherit;
+      display: block;
+      position: relative;
+    }
+
+    // Toggle, after.
+    .toggle::after {
+      content: "-";
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    // Toggle, closed.
+    .toggle--closed::after {
+      content: "+";
+    }
+  }
+
+  // Links.
+  .links {
+    display: none;
+    padding: 0 0 20px 0;
+
+    // Link.
+    .link {
+      display: block;
+      font-size: $font-size - 2px;
+      padding: 4px 0 4px 0;
+      position: relative;
+    }
+
+    // Links, open.
+    &.links--open {
+      display: block;
+    }
+  }
+
+  // Status.
+  .status {
+
+    // After.
+    &::after {
+      @include rounded(100%);
+      background-color: $color-grey-prime;
+      content: "";
+      height: 10px;
+      position: absolute;
+      right: 0;
+      top: 8px;
+      width: 10px;
+    }
+
+    // Status, done.
+    &.status--done::after {
+      background-color: $color-green-prime;
+    }
+
+    // Status, underway.
+    &.status--underway::after {
+      background-color: $color-yellow-prime;
+    }
+
+    // Status, backlog.
+    &.status--backlog::after {
+      background-color: $color-red-prime;
+    }
+  }
+}

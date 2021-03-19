@@ -1,0 +1,26 @@
+
+/* ----- ATOM-TIMER-BAR.scss ----- */
+
+// Atom, timer bar.
+.atom-timer-bar {
+  align-items: center;
+  display: flex;
+  padding: 10px 0;
+
+  .core-bar {
+    flex: 1 0 auto;
+    margin-right: 10px;
+    width: auto;
+  }
+
+  // Time.
+  .time {
+    color: $color-yellow-prime;
+    font-size: $font-size - 2px;
+
+    // Time, large.
+    &.time--large {
+      font-size: $font-size + 2px;
+    }
+  }
+}

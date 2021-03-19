@@ -1,0 +1,9 @@
+
+/* ----- ATOM-ALERT.scss ----- */
+
+// Atom, alert.
+.atom-alert {
+  @include full-border($color-green-prime);
+  margin: 40px 0;
+  padding: 40px 20px 20px 20px;
+}

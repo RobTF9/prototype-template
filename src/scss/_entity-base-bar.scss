@@ -1,0 +1,59 @@
+/* ----- ENTITY-BASE-BAR.scss ----- */
+
+// Entity, base bar.
+.entity-base-bar {
+  @include side-border(top, $color-grey-darkest);
+  margin-top: auto;
+  padding: 20px 0 0 0;
+
+
+  // Logo.
+  .logo {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  // SANS logo.
+  .sans-logo {
+    height: 35px;
+  }
+
+  // Links.
+  .links {
+
+    // Item.
+    .item {
+      display: inline-block;
+      padding: 0 0 0 20px;
+
+      // Responsive.
+      @media screen and (max-width: 850px) {
+        padding: 15px 10px 0 10px;
+      }
+
+      // Responsive.
+      @media screen and (max-width: 650px) {
+        display: block;
+      }
+    }
+
+    // Item, center.
+    .item--center {
+      padding: 15px 10px 0 10px;
+    }
+
+    // Responsive.
+    @media screen and (max-width: 850px) {
+      padding: 15px 0 0 0;
+      text-align: center;
+    }
+  }
+}
+
+// Entity, base bar centered variant.
+.entity-base-bar--centered {
+  border-top: none;
+}

@@ -1,0 +1,27 @@
+
+/* ----- ENTITY-BILLBOARD.scss ----- */
+
+// Entity, billboard.
+.entity-billboard {
+  margin-top: 50px;
+
+  // Content.
+  .content {
+    margin: 0 auto 0 auto;
+    max-width: $max-width - 250px;
+    padding: 50px 0 50px 0;
+    text-align: center;
+
+    // Responsive.
+    @media screen and (max-width: 850px) {
+      padding: 10px 0 10px 0;
+    }
+  }
+
+  // Actions.
+  .actions {
+    margin: 0 auto 0 auto;
+    max-width: $max-width - 750px;
+    padding-top: 20px;
+  }
+}

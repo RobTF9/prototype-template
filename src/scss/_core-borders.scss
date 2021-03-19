@@ -1,0 +1,18 @@
+
+/* ----- CORE-BORDERS.scss ----- */
+
+$border-width: 1px;
+$dot-width: 2px;
+
+// Borders.
+@mixin full-border($color) {
+  border: $border-width solid #{$color};
+}
+
+@mixin side-border($direction, $color) {
+  border-#{$direction}: $border-width solid #{$color};
+}
+
+@mixin dot-border($direction, $color) {
+  border-#{$direction}: $dot-width dotted #{$color};
+}

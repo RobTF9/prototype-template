@@ -1,0 +1,20 @@
+/* ----- LOADING.scss ----- */
+
+@keyframes pulse {
+  0% {
+    background-color: $color-grey-superdark;
+  }
+
+  50% {
+    background-color: $color-grey-uberdark;
+  }
+
+  100% {
+    background-color: $color-grey-superdark;
+  }
+}
+
+// Loading skeleton.
+.skeleton {
+  animation: pulse 2s infinite ease-in-out;
+}

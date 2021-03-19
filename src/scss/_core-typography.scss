@@ -1,0 +1,549 @@
+
+/* ----- CORE-TYPOGRAPHY.scss ----- */
+
+// Fonts.
+$font-primary: "PT Sans", helvetica, arial, sans-serif;
+$font-code: "PT Mono", monospace, sans-serif;
+
+// Font size.
+$font-size: 16px;
+
+// Font weight.
+$font-regular: 400;
+$font-bold: 800;
+
+// HTML.
+html {
+  font-size: 100%;
+  line-height: 1rem;
+  -webkit-text-size-adjust: 100%;
+}
+
+// Body.
+body {
+  @include tabular-numbers;
+  color: $color-primary-white;
+  font-family: $font-primary;
+  font-size: $font-size;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-weight: $font-regular;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+// Headings.
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.core-heading {
+  font-size: $font-size + 4px;
+  font-weight: $font-bold;
+  line-height: 1.4;
+  margin: 0 0 20px 0;
+  padding: 0;
+
+  // Heading, logo.
+  &.core-heading--logo {
+    font-size: $font-size;
+    font-weight: $font-regular;
+    letter-spacing: 0.1em;
+    line-height: 1;
+    margin: 0;
+    text-transform: uppercase;
+
+    // Heading, logo, quiet.
+    &.core-heading--logo-quiet {
+      color: $color-grey-dark;
+    }
+  }
+
+  // Heading, primary.
+  &.core-heading--primary {
+    font-size: 48px;
+    line-height: 1.1;
+
+    @media screen and (max-width: 1024px) {
+      font-size: 40px;
+    }
+
+    @media screen and (max-width: 600px) {
+      font-size: 36px;
+    }
+  }
+
+  // Heading, secondary.
+  &.core-heading--secondary {
+    font-size: 40px;
+    line-height: 1.2;
+
+    @media screen and (max-width: 1024px) {
+      font-size: 32px;
+    }
+
+    @media screen and (max-width: 600px) {
+      font-size: 28px;
+    }
+  }
+
+  // Heading, tertiary.
+  &.core-heading--tertiary {
+    font-size: 32px;
+    line-height: 1.3;
+    margin-bottom: 25px;
+
+    @media screen and (max-width: 1024px) {
+      font-size: 28px;
+    }
+
+    @media screen and (max-width: 600px) {
+      font-size: 24px;
+    }
+  }
+
+  // Heading, quaternary.
+  &.core-heading--quaternary {
+    font-size: 18px;
+    line-height: 1.4;
+    margin: 0 0 15px 0;
+  }
+
+  // Heading, quinary.
+  &.core-heading--quinary {
+    font-size: $font-size - 2px;
+    font-weight: $font-bold;
+    line-height: 1.6;
+    margin: 0 0 15px 0;
+    text-transform: uppercase;
+  }
+
+  // Heading, senary.
+  &.core-heading--senary {
+    font-size: $font-size - 4px;
+    font-weight: $font-bold;
+    line-height: 1.6;
+    margin: 0 0 5px 0;
+    text-transform: uppercase;
+  }
+
+  // Heading, tight.
+  &.core-heading--tight {
+    margin-bottom: 5px;
+  }
+
+  // Heading, center.
+  &.core-heading--center {
+    text-align: center;
+  }
+
+  // Heading, section.
+  &.core-heading--section {
+    padding-top: 40px;
+  }
+
+  // Heading, dark.
+  &.core-heading--dark {
+    color: $color-grey-uberdark;
+  }
+
+  // Heading, fieldset.
+  &.core-heading--fieldset {
+    @include side-border(bottom, $color-grey-darkest);
+    font-size: $font-size - 2px;
+    line-height: 1.6;
+    padding: 20px 0 10px 0;
+    text-transform: uppercase;
+    width: 100%;
+  }
+}
+
+// Text.
+p,
+.core-text {
+  color: $color-grey-lightest;
+  font-family: $font-primary;
+  font-size: $font-size;
+  font-weight: $font-regular;
+  line-height: 1.5;
+  margin: 0 0 15px 0;
+  word-wrap: break-word;
+
+  // Text, extreme.
+  &.core-text--extreme {
+    color: $color-grey-prime;
+    font-size: $font-size + 16px;
+  }
+
+  // Text, primary.
+  &.core-text--primary {
+    color: $color-primary-white;
+    font-weight: $font-bold;
+  }
+
+  // Text, secondary.
+  &.core-text--secondary {
+    color: $color-grey-lightest;
+  }
+
+  // Text, tertiary.
+  &.core-text--tertiary {
+    font-size: $font-size - 2px;
+  }
+
+  // Text, quaternary.
+  &.core-text--quaternary {
+    font-size: $font-size - 3px;
+    font-style: italic;
+  }
+
+  // Text, center.
+  &.core-text--center {
+    text-align: center;
+  }
+
+  // Text, justified.
+  &.core-text--justified {
+    text-align: justify;
+  }
+
+  // Text, tight.
+  &.core-text--tight {
+    margin-bottom: 5px;
+  }
+
+  // Text, tightest.
+  &.core-text--tightest {
+    margin-bottom: 0;
+  }
+
+  // Text, dark.
+  &.core-text--dark {
+    color: $color-grey-uberdark;
+  }
+
+  // Text, positive.
+  &.core-text--positive {
+    color: $color-green-prime;
+  }
+
+  // Text, warning.
+  &.core-text--warning {
+    color: $color-yellow-prime;
+  }
+
+  // Text, danger.
+  &.core-text--danger {
+    color: $color-red-prime;
+  }
+}
+
+// Highlight.
+.core-highlight {
+
+  // Highlight, positive.
+  &.core-highlight--positive {
+    color: $color-green-prime;
+  }
+
+  // Highlight, warning.
+  &.core-highlight--warning {
+    color: $color-yellow-prime;
+  }
+
+  // Highlight, danger.
+  &.core-highlight--danger {
+    color: $color-red-prime;
+  }
+}
+
+// Lists.
+ul,
+ol,
+.core-list {
+  padding: 0;
+
+  // List, unordered.
+  &.core-list--unordered {
+    list-style: disc;
+    margin: 0 0 15px 15px;
+  }
+
+  // List, ordered.
+  &.core-list--ordered {
+    list-style: decimal;
+    margin: 0 0 15px 20px;
+  }
+
+  // List, item.
+  li,
+  .core-list-item {
+    line-height: 1.6;
+    padding: 0 0 5px 0;
+  }
+
+  // List, item, expanded.
+  &.core-list--expanded {
+
+    // List, item.
+    .core-list-item {
+      padding: 0 0 15px 0;
+    }
+
+    // Last item.
+    .core-list-item:last-child {
+      padding-bottom: 5px;
+    }
+  }
+
+  // List, dark.
+  &.core-list--dark {
+    color: $color-grey-uberdark;
+  }
+}
+
+// Hack for classless lists.
+ul {
+  list-style: disc;
+  margin: 0 0 15px 15px;
+}
+
+ol {
+  list-style: decimal;
+  margin: 0 0 15px 20px;
+}
+
+// Blockquotes.
+blockquote,
+.core-blockquote {
+  @include side-border(left, $color-grey-lightest);
+  margin: 0;
+  padding: 0 0 0 20px;
+}
+
+// Links.
+a,
+.core-link {
+  @include appearance;
+  background: transparent;
+  border: 0;
+  @include side-border(bottom, $color-grey-darkest);
+  color: $color-blue-prime;
+  cursor: pointer;
+  font-weight: $font-regular;
+  padding: 0;
+  text-decoration: none;
+
+  // Focus.
+  &:focus {
+    outline: thin dotted $color-grey-light;
+    outline-offset: 2px;
+  }
+
+  // Visited.
+  &:visited {
+    color: $color-blue-prime;
+  }
+
+  // Link tap.
+  &:link {
+    -webkit-tap-highlight-color: $color-blue-prime;
+  }
+
+  // Hover.
+  &:hover {
+    @include side-border(bottom, $color-blue-prime);
+    color: $color-blue-prime;
+    transition: color 0.5s ease;
+  }
+
+  // Active.
+  &:active {
+    outline: thin dotted $color-grey-light;
+    outline-offset: 2px;
+  }
+
+  // Link, invisible.
+  &.core-link--invisible {
+    border: none;
+    color: $color-primary-white;
+
+    // Hover.
+    &:hover {
+      color: $color-blue-prime;
+    }
+  }
+
+  // Link, flying.
+  &.core-link--flying {
+    @include side-border(bottom, $color-grey-superdark);
+
+    // Hover.
+    &:hover {
+      @include side-border(bottom, $color-blue-prime);
+    }
+  }
+
+  // Link, quiet.
+  &.core-link--quiet {
+    border-bottom: none;
+    color: $color-grey-prime;
+
+    // Hover.
+    &:hover {
+      color: $color-blue-prime;
+    }
+  }
+
+  // Link, quiet emphasis.
+  &.core-link--quiet-emphasis {
+    color: $color-grey-prime;
+
+    // Hover.
+    &:hover {
+      @include side-border(bottom, $color-blue-prime);
+      color: $color-blue-prime;
+    }
+  }
+
+  // Link, positive.
+  &.core-link--positive {
+    color: $color-green-prime;
+
+    // Hover.
+    &:hover {
+      @include side-border(bottom, $color-green-prime);
+      color: $color-green-prime;
+    }
+  }
+
+  // Link, warning.
+  &.core-link--warning {
+    color: $color-yellow-prime;
+
+    // Hover.
+    &:hover {
+      @include side-border(bottom, $color-yellow-prime);
+      color: $color-yellow-prime;
+    }
+  }
+
+  // Link, danger.
+  &.core-link--danger {
+    color: $color-red-prime;
+
+    // Hover.
+    &:hover {
+      @include side-border(bottom, $color-red-prime);
+      color: $color-red-prime;
+    }
+  }
+
+  // Link, light.
+  &.core-link--light {
+    @include side-border(bottom, $color-grey-lightest);
+    color: $color-blue-darkest;
+  }
+
+  // Link, selected.
+  &.core-link--selected {
+    border-bottom: none;
+    color: $color-primary-white;
+    font-weight: $font-bold;
+  }
+
+  // Link, highlighted.
+  &.core-link--highlighted {
+    border-bottom: none;
+    @include side-border(left, $color-green-prime);
+    color: $color-primary-white;
+    font-weight: $font-bold;
+    padding-left: 8px;
+  }
+
+  // Link, disabled.
+  &:disabled,
+  &.core-link--disabled {
+    border-bottom: none;
+    color: $color-grey-dark;
+    font-style: italic;
+    pointer-events: none;
+  }
+
+  &.core-link--spaced {
+    margin-left: 5px;
+  }
+}
+
+// Selection.
+::selection {
+  background: $color-blue-prime;
+  color: $color-primary-white;
+  text-shadow: none;
+}
+
+// Bold.
+strong {
+  color: inherit;
+  font-weight: $font-bold;
+}
+
+// Emphasis.
+em {
+  font-style: italic;
+}
+
+// Abbreviations.
+abbr {
+  border-bottom: dotted 1px $color-grey-prime;
+  text-decoration: none;
+}
+
+// Code.
+code,
+.core-code {
+  @include rounded(5px);
+  background-color: $color-grey-darkest;
+  color: $color-grey-lightest;
+  font-family: $font-code;
+  font-size: $font-size - 2px;
+  line-height: 1.6;
+  margin: 0 0 15px 0;
+  padding: 4px 10px 4px 10px;
+}
+
+// Pre, code.
+// Note: display block added here for markdown output.
+pre code {
+  display: block;
+  margin: 0;
+}
+
+// Core code.
+.core-code {
+  display: block;
+
+  // Core, code, inline.
+  &.core-code--inline {
+    display: inline;
+  }
+
+  // Core, code, dark.
+  &.core-code--dark {
+    background-color: $color-grey-lightest;
+    color: $color-grey-darkest;
+  }
+
+  // Core, code, darker.
+  &.core-code--darker {
+    background-color: $color-primary-black;
+    color: $color-grey-lightest;
+  }
+}
+
+hr {
+  color: $color-grey-darkest;
+  margin-bottom: 15px;
+}

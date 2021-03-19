@@ -1,0 +1,22 @@
+
+/* ----- ATOM-COUNTDOWN.scss ----- */
+
+// Atom, countdown.
+.atom-countdown {
+  @include clearfix;
+
+  // Block.
+  .block {
+    @include full-border($color-grey-dark);
+    margin-bottom: 15px;
+    padding: 5px;
+    text-align: center;
+
+    // Unit.
+    .unit {
+      color: $color-grey-prime;
+      font-size: $font-size - 2px;
+      font-style: italic;
+    }
+  }
+}

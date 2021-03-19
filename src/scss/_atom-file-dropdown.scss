@@ -1,0 +1,28 @@
+
+/* ----- ATOM-FILE-DROPDOWN.scss ----- */
+
+// Atom, file-dropdown.
+.atom-file-dropdown {
+  margin-bottom: 10px;
+
+  .dropdown-input {
+    display: none;
+
+    &:checked {
+      ~ .content {
+        max-height: 135px;
+      }
+    }
+  }
+
+  .dropdown-label {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+
+  .content {
+    max-height: 0;
+    overflow: scroll;
+    transition: all .35s;
+  }
+}

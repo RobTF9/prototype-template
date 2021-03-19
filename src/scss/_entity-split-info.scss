@@ -1,0 +1,32 @@
+
+/* ----- ENTITY-SPLIT-INFO.scss ----- */
+
+// Entity, split-info
+.entity-split-info {
+
+  // Group.
+  .group {
+    margin: 0 0 60px 0;
+
+    // Group heading.
+    .group-heading {
+      @include side-border(bottom, $color-grey-dark);
+      margin: 0 0 20px 0;
+      padding: 0 0 15px 0;
+    }
+
+    // Group heading, reversed.
+    .group-heading--faqs {
+      align-items: flex-start;
+      @include side-border(top, $color-grey-dark);
+      display: flex;
+      justify-content: space-between;
+      margin: 0 0 20px 0;
+      padding: 15px 0 0 0;
+
+      .core-link {
+        height: 100%;
+      }
+    }
+  }
+}

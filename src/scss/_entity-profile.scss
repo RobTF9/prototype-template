@@ -1,0 +1,76 @@
+
+/* ----- ENTITY-PROFILE.scss ----- */
+
+// Entity, profile.
+.entity-profile {
+
+  // Info, primary.
+  .info-primary {
+    padding: 0 0 40px 0;
+  }
+
+  // Events.
+  .events {
+    padding: 0 0 20px 0;
+
+    // Event.
+    .event {
+      @include side-border(left, $color-blue-prime);
+      margin: 0 0 20px 0;
+      padding-left: 10px;
+    }
+
+    // Title and position.
+    .title,
+    .position {
+      margin: 0;
+    }
+  }
+
+  // Badges.
+  .badges {
+
+    // Badge.
+    .badge {
+      padding: 0 0 30px 0;
+    }
+
+    // Icon.
+    .icon {
+      @include side-border(left, $color-grey-dark);
+      @include side-border(right, $color-grey-dark);
+      @include side-border(top, $color-grey-dark);
+      min-height: 50px;
+      padding: 20px;
+    }
+
+    // Image.
+    .image {
+      margin: 0 auto 0 auto;
+      max-width: 200px;
+      width: 100%;
+    }
+
+    // Info.
+    .info {
+      @include full-border($color-grey-dark);
+      padding: 15px 15px 10px 15px;
+    }
+
+    // Badge, awarded.
+    .badge--awarded {
+
+      // Icon.
+      .icon {
+        @include side-border(left, $color-green-dark);
+        @include side-border(right, $color-green-dark);
+        @include side-border(top, $color-green-dark);
+      }
+
+      // Info.
+      .info {
+        @include full-border($color-green-dark);
+      }
+    }
+  }
+}

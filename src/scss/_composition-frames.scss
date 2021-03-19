@@ -1,0 +1,54 @@
+
+/* ----- COMPOSITION-FRAMES.scss ----- */
+
+// Frame.
+.frame {
+  @include clearfix;
+
+  // Frame, drawer.
+  .frame-drawer {
+    background-color: $color-grey-superdark;
+    height: 100%;
+    left: 0;
+    overflow-x: hidden;
+    position: fixed;
+    top: 0;
+    transition: 0.5s;
+    width: 0;
+    z-index: $z-top;
+  }
+
+  // Frame, desk.
+  .frame-desk {
+    overflow: hidden;
+    padding: 80px 0 120px 0;
+    position: relative;
+    transition: margin-left 0.5s;
+    z-index: $z-middle;
+
+    // Frame, drawer, toggle.
+    .frame-drawer-toggle {
+      font-size: $font-size - 2px;
+      left: 10px;
+      padding: 20px;
+      position: absolute;
+      text-align: center;
+      top: 3px;
+      transition: 0.5s;
+    }
+  }
+
+  // Frame, drawer, open.
+  &.frame--drawer-open {
+
+    // Frame, drawer.
+    .frame-drawer {
+      width: 250px;
+    }
+
+    // Frame, desk.
+    .frame-desk {
+      margin-left: 250px;
+    }
+  }
+}

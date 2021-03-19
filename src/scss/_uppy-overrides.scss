@@ -1,0 +1,31 @@
+.uppy-DragDrop-container {
+  background-color: $color-grey-superdark;
+  border-radius: 0;
+  margin-bottom: 10px;
+}
+
+.uppy-DragDrop--is-dragdrop-supported {
+  border: $dot-width dotted $color-grey-dark;
+}
+
+.uppy-DragDrop-arrow {
+  color: $color-grey-lightest;
+}
+
+.uppy-DragDrop-label {
+  color: $color-grey-lightest;
+  font-family: $font-primary;
+  font-weight: 500;
+}
+
+.uppy-DragDrop-browse {
+  color: $color-blue-prime;
+}
+
+.uppy-DragDrop--isDraggingOver {
+  border: $dot-width dotted $color-blue-prime;
+}
+
+.uppy-DragDrop--isDraggingOver .uppy-DragDrop-arrow {
+  fill: $color-grey-light;
+}

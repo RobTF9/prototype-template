@@ -1,0 +1,525 @@
+
+/* ----- ATOM-UPDATES.scss ----- */
+
+// Atom, updates.
+.atom-updates {
+  overflow: hidden;
+
+  // Update.
+  .update {
+    font-size: $font-size - 2px;
+    padding: 20px 0 20px 25px;
+    position: relative;
+    @include side-border(bottom, $color-grey-darkest);
+
+    // Circle.
+    &:before {
+      @include rounded(100%);
+      @include full-border($color-primary-white);
+      content: "";
+      height: 10px;
+      left: 0;
+      position: absolute;
+      top: 26px;
+      width: 10px;
+    }
+  }
+
+  // Update, positive, circle.
+  .update--positive:before {
+    @include full-border($color-green-prime);
+  }
+
+  // Update, warning, circle.
+  .update--warning:before {
+    @include full-border($color-yellow-prime);
+  }
+
+  // Update, danger, circle.
+  .update--danger:before {
+    @include full-border($color-red-prime);
+  }
+
+  // Info.
+  .info {
+
+  }
+
+  // Animation.
+  .animation {
+    @include full-border($color-grey-prime);
+    height: 80px;
+    margin: 10px 0 0 0;
+    max-width: 220px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+
+  // Item.
+  .item {
+    animation-iteration-count: 1;
+    position: absolute;
+    transition: all;
+  }
+
+  // Animation, event started, keyframes.
+  @keyframes animate-circle-one {
+    0% {
+      border-color: $color-primary-white;
+      top: -25px;
+    }
+
+    15% {
+      top: 38px;
+    }
+
+    25% {
+      top: 28px;
+    }
+
+    40% {
+      border-color: $color-primary-white;
+    }
+
+    50% {
+      border-color: $color-yellow-prime;
+    }
+
+    99% {
+      border-color: $color-yellow-prime;
+    }
+
+    100% {
+      border-color: $color-green-prime;
+    }
+  }
+  @keyframes animate-circle-two {
+    0% {
+      border-color: $color-primary-white;
+      top: -35px;
+    }
+
+    15% {
+      top: 38px;
+    }
+
+    35% {
+      top: 28px;
+    }
+
+    60% {
+      border-color: $color-primary-white;
+    }
+
+    70% {
+      border-color: $color-yellow-prime;
+    }
+
+    99% {
+      border-color: $color-yellow-prime;
+    }
+
+    100% {
+      border-color: $color-green-prime;
+    }
+  }
+  @keyframes animate-circle-three {
+    0% {
+      border-color: $color-primary-white;
+      top: -45px;
+    }
+
+    15% {
+      top: 38px;
+    }
+
+    45% {
+      top: 28px;
+    }
+
+    80% {
+      border-color: $color-primary-white;
+    }
+
+    90% {
+      border-color: $color-yellow-prime;
+    }
+
+    99% {
+      border-color: $color-yellow-prime;
+    }
+
+    100% {
+      border-color: $color-green-prime;
+    }
+  }
+
+  // Animation, event started.
+  .animation-event-started {
+
+    // Item, circles.
+    .item--circle-one,
+    .item--circle-two,
+    .item--circle-three {
+      @include rounded(100%);
+      @include full-border($color-green-prime);
+      height: 20px;
+      top: 28px;
+      width: 20px;
+    }
+
+    // Item, circle, one.
+    .item--circle-one {
+      animation: animate-circle-one 3s ease-in-out;
+      left: 57px;
+    }
+
+    // Item, circle, two.
+    .item--circle-two {
+      animation: animate-circle-two 3s ease-in-out;
+      left: 98px;
+    }
+
+    // Item, circle, three.
+    .item--circle-three {
+      animation: animate-circle-three 3s ease-in-out;
+      left: 139px;
+    }
+  }
+
+  // Animation, challenge completed, keyframes.
+  @keyframes animate-challenge-completed-panels {
+    0% {
+      top: 100px;
+    }
+
+    60% {
+      top: 10px;
+    }
+  }
+  @keyframes animate-challenge-completed-challenge-one {
+    0% {
+      border-color: $color-blue-prime;
+      top: 100px;
+    }
+
+    60% {
+      top: 23px;
+    }
+
+    99% {
+      border-color: $color-blue-prime;
+    }
+
+    100% {
+      border-color: $color-green-prime;
+    }
+  }
+  @keyframes animate-challenge-completed-challenge-two {
+    0% {
+      top: 100px;
+    }
+
+    60% {
+      top: 23px;
+    }
+  }
+  @keyframes animate-challenge-completed-challenges-three-and-four {
+    0% {
+      top: 100px;
+    }
+
+    60% {
+      top: 63px;
+    }
+  }
+
+  // Animation, challenge completed.
+  .animation-challenge-completed {
+
+    // Item, panel one.
+    .item--panel-one {
+      animation: animate-challenge-completed-panels 1.6s ease-in-out;
+      @include full-border($color-grey-prime);
+      height: 100px;
+      left: 40px;
+      top: 10px;
+      width: 40px;
+    }
+
+    // Item, panel two.
+    .item--panel-two {
+      animation: animate-challenge-completed-panels 1.6s ease-in-out;
+      @include full-border($color-grey-prime);
+      height: 100px;
+      left: 79px;
+      top: 10px;
+      width: 200px;
+    }
+
+    // Item, challenges.
+    .item--challenge-one,
+    .item--challenge-two,
+    .item--challenge-three,
+    .item--challenge-four {
+      @include full-border($color-blue-prime);
+      height: 30px;
+      width: 60px;
+    }
+
+    // Item, challenge one.
+    .item--challenge-one {
+      animation: animate-challenge-completed-challenge-one 2s ease-in;
+      @include full-border($color-green-prime);
+      left: 93px;
+      top: 23px;
+    }
+
+    // Item, challenge two.
+    .item--challenge-two {
+      animation: animate-challenge-completed-challenge-two 2.2s ease-in;
+      left: 163px;
+      top: 23px;
+    }
+
+    // Item, challenge three.
+    .item--challenge-three {
+      animation: animate-challenge-completed-challenges-three-and-four 2.4s ease-in;
+      left: 93px;
+      top: 63px;
+    }
+
+    // Item, challenge four.
+    .item--challenge-four {
+      animation: animate-challenge-completed-challenges-three-and-four 2.6s ease-in;
+      left: 163px;
+      top: 63px;
+    }
+  }
+
+  // Animation, badge awarded, keyframes.
+  @keyframes animate-badge-awarded-badge-one-panels {
+    0% {
+      left: 223px;
+    }
+
+    70% {
+      left: 53px;
+    }
+  }
+  @keyframes animate-badge-awarded-badge-two-panels {
+    0% {
+      left: 443px;
+    }
+
+    70% {
+      left: 143px;
+    }
+  }
+  @keyframes animate-badge-awarded-badge-one-circle {
+    0% {
+      border-color: $color-primary-white;
+      left: 275px;
+    }
+
+    70% {
+      left: 75px;
+    }
+
+    99% {
+      border-color: $color-primary-white;
+    }
+
+    100% {
+      border-color: $color-green-prime;
+    }
+  }
+  @keyframes animate-badge-awarded-badge-two-circle {
+    0% {
+      left: 465px;
+    }
+
+    70% {
+      left: 165px;
+    }
+  }
+
+  // Animation, badge awarded.
+  .animation-badge-awarded {
+
+    // Item, badge heads.
+    .item--badge-one-head,
+    .item--badge-two-head {
+      @include full-border($color-grey-prime);
+      height: 50px;
+      top: 12px;
+      width: 80px;
+    }
+
+    // Item, badge one head.
+    .item--badge-one-head {
+      animation: animate-badge-awarded-badge-one-panels 1.5s ease-in-out;
+      left: 53px;
+    }
+
+    // Item, badge two head.
+    .item--badge-two-head {
+      animation: animate-badge-awarded-badge-two-panels 1.5s ease-in-out;
+      left: 143px;
+    }
+
+    // Item, badge bases.
+    .item--badge-one-base,
+    .item--badge-two-base {
+      @include full-border($color-grey-prime);
+      height: 50px;
+      top: 61px;
+      width: 80px;
+    }
+
+    // Item, badge one base.
+    .item--badge-one-base {
+      animation: animate-badge-awarded-badge-one-panels 1.5s ease-in-out;
+      left: 53px;
+    }
+
+    // Item, badge two base.
+    .item--badge-two-base {
+      animation: animate-badge-awarded-badge-two-panels 1.5s ease-in-out;
+      left: 143px;
+    }
+
+    // Item, badge circles.
+    .item--badge-one-circle,
+    .item--badge-two-circle {
+      @include rounded(100%);
+      @include full-border($color-primary-white);
+      height: 36px;
+      top: 20px;
+      width: 36px;
+    }
+
+    // Item, badge one circle.
+    .item--badge-one-circle {
+      animation: animate-badge-awarded-badge-one-circle 1.5s ease-in-out;
+      @include full-border($color-green-prime);
+      left: 75px;
+    }
+
+    // Item, badge two circle.
+    .item--badge-two-circle {
+      animation: animate-badge-awarded-badge-two-circle 1.5s ease-in-out;
+      left: 165px;
+    }
+  }
+
+  // Animation, group unlocked, keyframes.
+  @keyframes animate-group-unlocked-panels {
+    0% {
+      top: 100px;
+    }
+
+    60% {
+      top: 10px;
+    }
+  }
+  @keyframes animate-group-unlocked-challenges-one-and-two {
+    0% {
+      border-color: $color-red-prime;
+      top: 100px;
+    }
+
+    60% {
+      top: 23px;
+    }
+
+    99% {
+      border-color: $color-red-prime;
+    }
+
+    100% {
+      border-color: $color-blue-prime;
+    }
+  }
+  @keyframes animate-group-unlocked-challenges-three-and-four {
+    0% {
+      border-color: $color-red-prime;
+      top: 100px;
+    }
+
+    60% {
+      top: 63px;
+    }
+
+    99% {
+      border-color: $color-red-prime;
+    }
+
+    100% {
+      border-color: $color-blue-prime;
+    }
+  }
+
+  // Animation, group unlocked.
+  .animation-group-unlocked {
+
+    // Item, panel one.
+    .item--panel-one {
+      animation: animate-group-unlocked-panels 1.6s ease-in-out;
+      @include full-border($color-grey-prime);
+      height: 100px;
+      left: 40px;
+      top: 10px;
+      width: 40px;
+    }
+
+    // Item, panel two.
+    .item--panel-two {
+      animation: animate-group-unlocked-panels 1.6s ease-in-out;
+      @include full-border($color-grey-prime);
+      height: 100px;
+      left: 78px;
+      top: 10px;
+      width: 200px;
+    }
+
+    // Item, challenges.
+    .item--challenge-one,
+    .item--challenge-two,
+    .item--challenge-three,
+    .item--challenge-four {
+      @include full-border($color-blue-prime);
+      height: 30px;
+      width: 60px;
+    }
+
+    // Item, challenge one.
+    .item--challenge-one {
+      animation: animate-group-unlocked-challenges-one-and-two 2s ease-in;
+      left: 93px;
+      top: 23px;
+    }
+
+    // Item, challenge two.
+    .item--challenge-two {
+      animation: animate-group-unlocked-challenges-one-and-two 2.2s ease-in;
+      left: 163px;
+      top: 23px;
+    }
+
+    // Item, challenge three.
+    .item--challenge-three {
+      animation: animate-group-unlocked-challenges-three-and-four 2.4s ease-in;
+      left: 93px;
+      top: 63px;
+    }
+
+    // Item, challenge four.
+    .item--challenge-four {
+      animation: animate-group-unlocked-challenges-three-and-four 2.6s ease-in;
+      left: 163px;
+      top: 63px;
+    }
+  }
+}

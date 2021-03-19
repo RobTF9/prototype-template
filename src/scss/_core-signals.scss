@@ -1,0 +1,63 @@
+
+/* ----- CORE-SIGNALS.scss ----- */
+
+// Signal.
+.core-signal {
+  background-color: $color-grey-prime;
+  @include full-border($color-grey-prime);
+  color: $color-grey-uberdark;
+  font-style: italic;
+  line-height: 1.6;
+  margin: 0 0 20px 0;
+  padding: 20px;
+
+  // List item.
+  .core-list-item {
+    color: $color-grey-uberdark;
+  }
+
+  // Signal, center.
+  &.core-signal--center {
+    text-align: center;
+  }
+
+  // Signal, shallow.
+  &.core-signal--shallow {
+    padding: 6px 20px 6px 20px;
+  }
+
+  // Signal, positive.
+  &.core-signal--positive {
+    background-color: $color-green-prime;
+    @include full-border($color-green-prime);
+  }
+
+  // Signal, warning.
+  &.core-signal--warning {
+    background-color: $color-yellow-prime;
+    @include full-border($color-yellow-prime);
+  }
+
+  // Signal, danger.
+  &.core-signal--danger {
+    background-color: $color-red-prime;
+    @include full-border($color-red-prime);
+  }
+
+  // Signal, multipart.
+  &.core-signal--multipart {
+    padding-bottom: 0;
+
+    // Signal, intro.
+    .core-signal-intro {
+      color: $color-grey-uberdark;
+      margin: 0 0 15px 0;
+    }
+  }
+
+  // link in Signal.
+  &.core-link {
+    @include side-border(bottom, $color-grey-uberdark);
+    color: $color-grey-uberdark;
+  }
+}

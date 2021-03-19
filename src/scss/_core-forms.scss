@@ -1,0 +1,643 @@
+
+/* ----- CORE-FORMS.scss ----- */
+
+// Form.
+.core-form {
+
+  // Field.
+  .field {
+    @include clearfix;
+    margin: 0 0 20px 0;
+    position: relative;
+
+    // With options.
+    &.field--with-options {
+      margin-bottom: 10px;
+    }
+
+    // Options.
+    &.field--options {
+      margin-left: 25px;
+    }
+
+    // Shallow.
+    &.field--shallow {
+      margin-bottom: 0;
+    }
+
+    // Options, indented.
+    .options--indented {
+      margin-left: 25px;
+    }
+
+    // Option.
+    .option {
+      margin-top: 2px;
+    }
+  }
+
+  // Labels.
+  .label {
+    color: $color-grey-prime;
+    display: block;
+    font-size: $font-size - 2px;
+    line-height: 1.3;
+    padding: 0 0 5px 0;
+
+    // Label, centered.
+    &.label--center {
+      text-align: center;
+    }
+
+    // Label, with limiter.
+    &.label--limiter {
+      padding-right: 100px;
+    }
+
+    // Label, with power.
+    &.label--power {
+      padding-right: 100px;
+    }
+
+    // Label, required.
+    &.label--required::after {
+      color: $color-yellow-prime;
+      content: '*';
+      padding: 0 0 0 3px;
+    }
+  }
+
+  // Tips.
+  .tip {
+    color: $color-grey-light;
+    font-size: $font-size - 3px;
+    font-style: italic;
+    line-height: 1.3;
+    padding: 5px 0 0 0;
+    text-align: right;
+
+    // Tip, positive.
+    &.tip--positive {
+      color: $color-green-prime;
+    }
+
+    // Tip, warning.
+    &.tip--warning {
+      color: $color-yellow-prime;
+    }
+
+    // Tip, danger.
+    &.tip--danger {
+      color: $color-red-prime;
+    }
+  }
+
+  // Limiter, count.
+  .limiter-count {
+    color: $color-grey-light;
+    font-size: $font-size - 1px;
+    font-style: italic;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    top: 2px;
+    width: 80px;
+
+    // Limiter, count, warning.
+    &.limiter-count--warning {
+      color: $color-yellow-prime;
+    }
+
+    // Limiter, count, danger.
+    &.limiter-count--danger {
+      color: $color-red-prime;
+    }
+  }
+
+  // Tabs.
+  .tabs {
+    padding-top: 10px;
+    position: relative;
+
+    // Content.
+    .content {
+      display: none;
+    }
+
+    // Content, preview.
+    .content--preview {
+      background: $color-grey-superdark;
+      @include full-border($color-grey-prime);
+      padding: 12px 14px 12px 14px;
+    }
+
+    // Input.
+    .radio-input {
+      @include visually-hidden;
+    }
+
+    // Label.
+    .radio-label {
+      color: $color-grey-lightest;
+      cursor: pointer;
+      display: inline-block;
+      font-size: $font-size - 1px;
+      height: 36px;
+      line-height: 1.5;
+      max-width: 90px;
+      padding: 4px 4px 6px 4px;
+      position: absolute;
+      right: 0;
+      text-align: center;
+      top: 0.5px;
+      width: 100%;
+      z-index: $z-top;
+    }
+
+    // Content, when checked.
+    .radio-input:checked ~ .content {
+      display: block;
+    }
+
+    // Label, checked.
+    .radio-input:checked ~ .radio-label {
+      background-color: $color-grey-superdark;
+      @include side-border(left, $color-grey-prime);
+      @include side-border(right, $color-grey-prime);
+      @include side-border(top, $color-grey-prime);
+      box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.0625);
+    }
+
+    .radio-label:hover,
+    .radio-input:focus + .radio-label {
+      color: $color-blue-prime;
+    }
+
+    // Label, when not checked.
+    .radio-input:not(:checked) ~ .radio-label {
+      @include side-border(top, $color-grey-superdark);
+      color: $color-blue-prime;
+    }
+
+    .radio-input:disabled + .radio-label {
+      color: $color-grey-prime;
+      cursor: default;
+    }
+
+    // Tab, write, label.
+    .tab--write .radio-label {
+      right: 90px;
+    }
+
+    // Responsive.
+    @media screen and (max-width: 750px) {
+
+      // Label.
+      .label {
+        padding-bottom: 50px;
+      }
+
+      // Radio, label.
+      .radio-label {
+        top: 46px;
+      }
+    }
+  }
+
+  // Power.
+  .power {
+    @include clearfix;
+    position: absolute;
+    right: 0;
+    top: 12px;
+    width: 80px;
+
+    // Bar.
+    .bar {
+      @include rounded(5px);
+      background-color: $color-grey-prime;
+      float: left;
+      height: 2px;
+      margin-right: 5%;
+      width: 21.25%;
+
+      // Quarter, end.
+      &:nth-child(4n + 4) {
+        margin-right: 0;
+      }
+    }
+
+    // Power, one.
+    &.power--one {
+
+      // Bar, one.
+      .bar-one {
+        background-color: $color-red-prime;
+      }
+    }
+
+    // Power, two.
+    &.power--two {
+
+      // Bar, one and two.
+      .bar-one,
+      .bar-two {
+        background-color: $color-red-prime;
+      }
+    }
+
+    // Power, three.
+    &.power--three {
+
+      // Bar, one, two and three.
+      .bar-one,
+      .bar-two,
+      .bar-three {
+        background-color: $color-red-prime;
+      }
+    }
+
+    // Power, four.
+    &.power--four {
+
+      // Bar, one, two, three and four.
+      .bar-one,
+      .bar-two,
+      .bar-three,
+      .bar-four {
+        background-color: $color-green-prime;
+      }
+    }
+
+    // Suggestions.
+    .suggestions {
+      color: $color-grey-prime;
+      font-size: $font-size - 2px;
+      font-style: italic;
+      line-height: 1.3;
+      padding: 5px 0 0 0;
+    }
+  }
+
+  // Inputs, text and textarea.
+  .input-text,
+  .input-textarea {
+    @include appearance;
+    background: $color-grey-superdark;
+    @include full-border($color-grey-prime);
+    box-sizing: inherit;
+    color: $color-primary-white;
+    display: block;
+    font-family: $font-primary;
+    font-size: $font-size;
+    font-weight: $font-regular;
+    height: 50px;
+    margin: 0;
+    max-width: 100%;
+    min-height: 50px;
+    outline: none;
+    padding: 12px 14px 12px 14px;
+    width: 100%;
+
+    // Focus.
+    &:focus {
+      background: $color-grey-superdark;
+      @include full-border($color-blue-prime);
+    }
+
+    // Shallow.
+    &.input-text--shallow {
+      font-size: $font-size - 1px;
+      height: 32px;
+      min-height: 32px;
+      padding: 7px 7px 7px 7px;
+    }
+
+    // Centered.
+    &.input-text--center {
+      text-align: center;
+    }
+
+    // Positive.
+    &.input-text--positive,
+    &.input-textarea--positive {
+      @include full-border($color-green-prime);
+    }
+
+    // Warning.
+    &.input-text--warning,
+    &.input-textarea--warning {
+      @include full-border($color-yellow-prime);
+    }
+
+    // Danger.
+    &.input-text--danger,
+    &.input-textarea--danger {
+      @include full-border($color-red-prime);
+    }
+
+    // Disabled and read only.
+    &.input-text--disabled,
+    &:disabled,
+    &:-moz-read-only {
+      background-color: $color-grey-darkest;
+      color: $color-grey-prime;
+    }
+
+    &.input-text--disabled,
+    &:disabled,
+    &:read-only {
+      background-color: $color-grey-darkest;
+      color: $color-grey-prime;
+    }
+  }
+
+  // Input, just textarea.
+  .input-textarea {
+    height: 80px;
+    line-height: 25px;
+    overflow: hidden;
+    padding: 12px 14px 12px 14px;
+    resize: none;
+    vertical-align: top;
+    word-wrap: break-word;
+  }
+
+  // Input, file.
+  .input-file {
+    border: dotted $dot-width $color-grey-dark;
+    font-size: $font-size - 1px;
+    padding: 20px;
+    width: 100%;
+  }
+
+  // Radio and checkbox.
+  .radio,
+  .checkbox {
+    @include clearfix;
+
+    // Indented.
+    &.radio--indented,
+    &.checkbox--indented {
+      font-size: $font-size - 1px;
+      margin-left: 25px;
+    }
+
+    // Input.
+    .radio-input,
+    .checkbox-input {
+      @include visually-hidden;
+    }
+
+    // Label.
+    .radio-label,
+    .checkbox-label {
+      color: $color-primary-white;
+      cursor: pointer;
+      display: inline-block;
+      line-height: 1.5;
+      padding: 4px 0 4px 24px;
+      position: relative;
+      width: 100%;
+    }
+
+    .checkbox-label--large {
+      padding: 0 0 0 26px;
+    }
+
+    // Indicator.
+    .radio-label::before,
+    .checkbox-label::before {
+      @include full-border($color-grey-lightest);
+      content: '';
+      display: block;
+      height: 10px;
+      left: 0;
+      position: absolute;
+      top: 9px;
+      width: 10px;
+    }
+
+    .checkbox-label--large::before {
+      height: 14px;
+      top: 4px;
+      width: 14px;
+    }
+
+    // Hover and Focus.
+    .radio-label:hover,
+    .radio-input:focus + .radio-label,
+    .checkbox-label:hover,
+    .checkbox-input:focus + .checkbox-label {
+      color: $color-blue-prime;
+      transition: all 0.5s ease;
+
+      // Before.
+      &::before {
+        @include full-border($color-blue-prime);
+      }
+    }
+
+    // Checked.
+    .radio-input:checked ~ .radio-label::before,
+    .checkbox-input:checked ~ .checkbox-label::before {
+      background: $color-blue-prime;
+      @include full-border($color-blue-prime);
+      transition: all 0.5s ease;
+    }
+
+    // Disabled.
+    .radio-input:disabled ~ .radio-label,
+    .radio-input--disabled ~ .radio-label,
+    .checkbox-input:disabled ~ .checkbox-label {
+      color: $color-grey-prime;
+      font-style: italic;
+      pointer-events: none;
+    }
+  }
+
+  // Just radio.
+  .radio {
+
+    // Indicator.
+    .radio-label::before {
+      @include rounded(100%);
+    }
+  }
+
+  // Select.
+  .select {
+    position: relative;
+
+    // Select, single and multiple.
+    .select--single,
+    .select--multiple,
+    .react-select__control {
+      @include appearance;
+      background: $color-grey-superdark;
+      @include full-border($color-grey-prime);
+      box-sizing: inherit;
+      color: $color-primary-white;
+      cursor: pointer;
+      display: block;
+      font-family: $font-primary;
+      font-size: $font-size;
+      font-weight: $font-regular;
+      outline: none;
+      padding: 7px 9px;
+      position: relative;
+      width: 100%;
+    }
+
+    // Select, single
+    .select--single {
+      height: 50px;
+    }
+
+    // Select, icon.
+    .select-icon {
+      pointer-events: none;
+      position: absolute;
+      right: 14px;
+      top: 21px;
+      z-index: 1;
+    }
+
+    // Select, multiple, hide icon.
+    .select--multiple + .select-icon {
+      display: none;
+    }
+
+    // Select, option.
+    .select-option {
+      padding: 5px;
+    }
+
+    // Select, option, checked.
+    .select--multiple .select-option:checked,
+    .select--multiple:focus .select-option:checked {
+
+      // Linear gradient hack to color the selected options. Ugh.
+      background: $color-blue-prime linear-gradient(0deg, $color-blue-prime 0%, $color-blue-prime 100%);
+    }
+
+    // Readonly
+    .select--readonly {
+      background-color: $color-grey-darkest;
+      color: $color-grey-prime;
+      pointer-events: none;
+    }
+
+    // Select tags, control.
+    .react-select__control {
+      border-radius: 0;
+      display: flex;
+      padding: 5px 0 5px 14px;
+
+      .react-select__value-container {
+        padding: 0;
+      }
+
+      .react-select__dropdown-indicator svg,
+      .react-select__clear-indicator svg {
+        fill: $color-grey-prime;
+      }
+
+      .react-select__dropdown-indicator:hover svg {
+        fill: $color-blue-prime;
+      }
+
+      .react-select__clear-indicator:hover svg {
+        fill: $color-red-prime;
+      }
+
+      .react-select__indicator-separator {
+        background-color: $color-grey-darkest;
+        width: $border-width;
+      }
+
+      .react-select__single-value {
+        color: $color-grey-lightest;
+      }
+
+      .react-select__single-value--is-disabled {
+        color: $color-grey-prime;
+      }
+
+      .react-select__multi-value {
+        background-color: $color-blue-prime;
+      }
+
+      .react-select__multi-value__remove svg {
+        fill: $color-grey-superdark;
+      }
+
+      .react-select__multi-value__remove:hover {
+        background-color: $color-red-prime;
+      }
+
+      .react-select__multi-value__remove:hover svg {
+        fill: $color-primary-white;
+      }
+    }
+
+    // Select tags, input.
+    .react-select__input {
+      color: $color-grey-lightest;
+
+      input {
+        font-weight: 500 !important;
+      }
+    }
+
+    // Select tags, menu.
+    .react-select__menu {
+      background: $color-grey-superdark;
+      @include full-border($color-grey-prime);
+      border-radius: 0;
+      color: $color-grey-light;
+      margin-top: -2px;
+
+      .react-select__option {
+        background-color: transparent;
+        color: $color-primary-white;
+      }
+
+      .react-select__option:hover,
+      .react-select__option--is-focused {
+        background: $color-blue-prime;
+        color: $color-grey-superdark;
+      }
+    }
+  }
+
+  // Actions.
+  .actions {
+    @include clearfix;
+    padding: 15px 0 0 0;
+  }
+
+  // Extras.
+  .extras {
+    padding: 5px 0 5px 0;
+    text-align: center;
+
+    // Links.
+    .core-link {
+      margin: 0 10px 0 10px;
+
+      // Responsive.
+      @media screen and (max-width: 850px) {
+        border: none;
+        display: block;
+        margin: 0 0 10px 0;
+      }
+    }
+  }
+
+  // Compact.
+  .compact {
+    padding-right: 160px;
+    position: relative;
+  }
+}

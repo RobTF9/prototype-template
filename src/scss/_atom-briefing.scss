@@ -1,0 +1,145 @@
+
+/* ----- ATOM-BRIEFING.scss ----- */
+
+// Atom, briefing.
+.atom-briefing {
+
+  // Answer.
+  .answer {
+    padding: 0 0 20px 0;
+  }
+
+  // Hints
+  .hints {
+    margin: 50px 0 20px;
+
+    .reveal {
+      margin: 30px 0;
+    }
+
+    .hint {
+      padding-top: 15px;
+    }
+
+    .hint-header {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+
+      .core-heading {
+        margin: 0;
+      }
+
+      .core-link {
+        font-size: 14px;
+      }
+    }
+
+    .hint-body {
+      margin-bottom: 15px;
+    }
+
+    .hint-header--hidden {
+      .core-heading {
+        color: $color-grey-prime;
+      }
+    }
+  }
+
+  // Multiple choice
+  .multiple-choice {
+    margin-top: 50px;
+
+    input[type='submit'] {
+      margin-top: 50px;
+    }
+  }
+
+  // Briefing.
+  .briefing {
+    margin: 0 auto 0 auto;
+    max-width: $max-width - 500px;
+    padding: 60px 0 60px 0;
+
+    // Details.
+    .details {
+
+      // Note, this areas breaks the rule apart styling tags directly.
+      // It does so because it'll be exported mark-up from markdown rendering.
+
+      // Headings.
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        padding-top: 20px;
+      }
+
+      // Break long links.
+      a {
+        border: none;
+        display: inline-block;
+        word-break: break-all !important;
+      }
+
+      // Responsive.
+      @media screen and (max-width: 850px) {
+        padding: 20px 0 20px 0;
+      }
+    }
+
+    .briefing-heading {
+      @include side-border(bottom, $color-grey-darkest);
+      padding-bottom: 10px;
+    }
+  }
+
+  // Info.
+  .briefing > .info {
+    padding: 0 0 40px 0;
+    text-align: center;
+
+    // Points.
+    .points {
+      color: $color-green-prime;
+      font-size: $font-size - 1px;
+      margin-bottom: 30px;
+
+      .strike {
+        color: $color-grey-prime;
+        text-decoration: line-through;
+      }
+    }
+
+    .penalty {
+      color: $color-yellow-prime;
+    }
+
+    .group-info {
+      margin-top: 30px;
+
+      & > button {
+        align-items: center;
+        border-bottom: none;
+        display: inline-flex;
+        transition: none;
+      }
+
+      & > button > svg {
+        display: inline;
+        margin-right: 6px;
+      }
+
+      .info {
+        background: $color-grey-uberdark;
+        border-radius: 5px;
+        margin-top: 20px;
+        padding: 20px;
+        text-align: left;
+      }
+    }
+  }
+}

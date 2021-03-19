@@ -1,0 +1,102 @@
+
+/* ----- ENTITY-LIBRARY-BLOCK.scss ----- */
+
+// Entity, library block.
+.entity-library-block {
+  background-color: $color-primary-white;
+
+  // Example.
+  .examples {
+
+    // Example.
+    .example {
+      @include rounded(5px);
+      background-color: $color-grey-superdark;
+      margin: 0 0 15px 0;
+      padding: 40px;
+    }
+  }
+
+  // Item.
+  .item {
+    @include full-border($color-grey-lightest);
+    margin: 0 0 15px 0;
+    padding: 30px 30px 15px 30px;
+  }
+
+  // Palette.
+  .palette {
+    @include clearfix;
+    @include rounded(5px);
+    background-color: $color-grey-superdark;
+    margin: 0 0 15px 0;
+    overflow: hidden;
+    padding: 20px;
+
+    // Color.
+    .swatch {
+      float: left;
+      font-family: $font-code;
+      font-size: $font-size - 5px;
+      padding: 40px 10px 10px 10px;
+      width: 14.285%;
+
+      // Responsive.
+      @media screen and (max-width: 850px) {
+        padding: 10px;
+        width: 100%;
+      }
+    }
+
+    // Palette, simple.
+    &.palette--simple {
+
+      // Swatch, first.
+      .swatch:first-child {
+        @include rounded-left(5px);
+
+        // Responsive.
+        @media screen and (max-width: 850px) {
+          @include rounded-left(0);
+        }
+      }
+    }
+
+    // Palette, contrast.
+    &.palette--contrast {
+      padding-bottom: 0;
+
+      // Set.
+      .set {
+        @include clearfix;
+        padding: 0 0 20px 0;
+      }
+
+      // Swatch, first.
+      .set .swatch:first-child {
+        @include rounded-left(5px);
+
+        // Responsive.
+        @media screen and (max-width: 850px) {
+          @include rounded-left(0);
+        }
+      }
+
+      // Swatch, last.
+      .set .swatch:last-child {
+        @include rounded-right(5px);
+
+        // Responsive.
+        @media screen and (max-width: 850px) {
+          @include rounded-right(0);
+        }
+      }
+
+      // Swatch.
+      .swatch {
+        min-height: 100px;
+        padding: 10px;
+      }
+    }
+  }
+}

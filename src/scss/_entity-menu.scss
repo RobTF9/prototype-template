@@ -1,0 +1,31 @@
+
+/* ----- ENTITY-MENU.scss ----- */
+
+// Entity, menu.
+.entity-menu {
+  padding: 0 20px 40px 0;
+
+  // Links.
+  .links {
+
+    // Link.
+    .link {
+      display: block;
+      padding-bottom: 12px;
+      padding-top: 12px;
+      position: relative;
+    }
+  }
+
+  // Set.
+  .set {
+    padding-top: 40px;
+
+    // Link.
+    .link {
+      font-size: $font-size - 2px;
+      padding-bottom: 6px;
+      padding-top: 6px;
+    }
+  }
+}

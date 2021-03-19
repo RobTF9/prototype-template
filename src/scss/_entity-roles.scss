@@ -1,0 +1,36 @@
+
+/* ----- ENTITY-ROLES.scss ----- */
+
+// Entity, roles.
+.entity-roles {
+
+  // Role.
+  .role {
+    min-height: 240px;
+    padding: 40px 0 0 220px;
+    position: relative;
+
+    // Responsive.
+    @media screen and (max-width: 650px) {
+      padding-left: 70px;
+    }
+  }
+
+  // Composition.
+  .comp {
+    left: 0;
+    position: absolute;
+    top: 40px;
+    width: 200px;
+
+    // Responsive.
+    @media screen and (max-width: 650px) {
+      width: 50px;
+    }
+  }
+
+  // Actions.
+  .actions {
+    padding: 45px 0 0 0;
+  }
+}
