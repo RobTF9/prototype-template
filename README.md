@@ -1,5 +1,5 @@
-# ts-app
-Simple starter for building webapps with React and TypeScript
+# prototype-template
+Simple starter for building protoypes
 
 ## Set up
 You'll need Node and Yarn installed. I use [**volta**](https://volta.sh/).
