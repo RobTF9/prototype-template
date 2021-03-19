@@ -2,11 +2,100 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link type="text/css" rel="stylesheet" href="../scss/index.scss" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Protoype</title>
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+      href="/assets/fonts/PTSans-Italic.woff2"
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+      href="/assets/fonts/PTSans-BoldItalic.woff2"
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+      href="/assets/fonts/PTSans-Regular.woff2"
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+      href="/assets/fonts/PTSans-Bold.woff2"
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+      href="/assets/fonts/FiraMono-Regular.woff2"
+    />
+    <style type="text/css">
+      @font-face {
+        font-family: 'PT Sans';
+        font-style: italic;
+        font-weight: 400;
+        src: local('PT Sans Italic'), local('PTSans-Italic'),
+          url(/assets/fonts/PTSans-Italic.woff2) format('woff2'),
+          url(/assets/fonts/PTSans-Italic.woff) format('woff');
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'PT Sans';
+        font-style: italic;
+        font-weight: 800;
+        src: local('PT Sans Bold Italic'), local('PTSans-BoldItalic'),
+          url(/assets/fonts/PTSans-BoldItalic.woff2) format('woff2'),
+          url(/assets/fonts/PTSans-BoldItalic.woff) format('woff');
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'PT Sans';
+        font-style: normal;
+        font-weight: 400;
+        src: local('PT Sans Regular'), local('PTSans-Regular'),
+          url(/assets/fonts/PTSans-Regular.woff2) format('woff2'),
+          url(/assets/fonts/PTSans-Regular.woff) format('woff');
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'PT Sans';
+        font-style: normal;
+        font-weight: 800;
+        src: local('PT Sans Bold'), local('PTSans-Bold'),
+          url(/assets/fonts/PTSans-Bold.woff2) format('woff2'),
+          url(/assets/fonts/PTSans-Bold.woff) format('woff');
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'Fira Mono';
+        font-style: normal;
+        font-weight: 400;
+        src: local('Fira Mono Regular'), local('FiraMono-Regular'),
+          url(/assets/fonts/FiraMono-Regular.woff2) format('woff2'),
+          url(/assets/fonts/FiraMono-Regular.woff) format('woff');
+        font-display: swap;
+      }
+    </style>
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="../src/scss/styles.scss"
+    />
   </head>
-  <body>
+  <body class="body body--dark">
     <div id="appContainer"></div>
     <script src="../src/index.js" type="text/javascript"></script>
   </body>
